@@ -1,0 +1,8 @@
+.idea
+.ivy2
+.sbt
+.sonar
+/project/project/
+/project/target/
+/target/
+*.iml
