@@ -1,0 +1,20 @@
+name: CI
+on: [push]
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Setup Docker Image
+        uses: docker://hseeberger/scala-sbt:8u242_1.3.8_2.13.1
+      - uses: actions/checkout@v1
+      - name: Test
+        run: |
+          sbt test
+      - name: Package
+        run: |
+          sbt package
+      - name: Upload Package
+        uses: actions/upload-artifact@v1
+        with:
+          name: apiloop-workers-${{ github.sha }}
+          path: target/scala-2.13/workers_2.13-0.1.0.jar
