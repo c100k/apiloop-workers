@@ -1,5 +1,7 @@
 # Apiloop Workers
 
+[![Actions Status](https://github.com/c100k/xp/workflows/CI/badge.svg)](https://github.com/c100k/xp/actions)
+
 ![Workers](resources/workers.png)
 
 ## Overview
@@ -44,7 +46,7 @@ Here is a list of the workers currently implemented. The workers were implemente
 ```shell
 docker run -it --rm \
     -v $(pwd):/root \
-    hseeberger/scala-sbt:8u222_1.3.5_2.13.1 \
+    hseeberger/scala-sbt:8u242_1.3.8_2.13.1 \
     sbt test
 ```
 
@@ -53,7 +55,7 @@ docker run -it --rm \
 ```shell
 docker run -it --rm \
     -v $(pwd):/root \
-    hseeberger/scala-sbt:8u222_1.3.5_2.13.1 \
+    hseeberger/scala-sbt:8u242_1.3.8_2.13.1 \
     sbt package
 ```
 

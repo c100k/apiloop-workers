@@ -4,7 +4,7 @@ name                    := "workers"
 
 version                 := "0.1.0"
 
-scalaVersion            := "2.11.7"
+scalaVersion            := "2.13.1"
 
 offline                 := true
 
@@ -36,7 +36,3 @@ libraryDependencies ++= Seq(
     "com.github.slugify"                %           "slugify"                   %                       "2.1.3",
     "org.springframework"               %           "spring-core"               %                       "4.2.4.RELEASE"
 )
-
-jacoco.settings
-
-parallelExecution in jacoco.Config := false
